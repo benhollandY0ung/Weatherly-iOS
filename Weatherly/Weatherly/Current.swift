@@ -13,7 +13,7 @@ struct Current {
     
     var currentTime: String?
     var temperature: Int
-    var humidity: Double?
+    var humidity: Double
     var precipProbability: Double
     var summary: String
     var icon: UIImage?
@@ -21,18 +21,20 @@ struct Current {
     var pressure: Double
     var visibility: Double
     var windSpeed: Double
+    //var nearestStorm: Double
     
     init(weatherDictionary: NSDictionary) {
         let currentWeather = weatherDictionary["currently"] as NSDictionary
         
         temperature = currentWeather["temperature"] as Int
-        humidity = currentWeather["humidity"] as Double?
+        humidity = currentWeather["humidity"] as Double
         precipProbability = currentWeather["precipProbability"] as Double
         summary = currentWeather["summary"] as String
         ozone = currentWeather["ozone"] as Double
         pressure = currentWeather["pressure"] as Double
         visibility = currentWeather["visibility"] as Double
         windSpeed = currentWeather["windSpeed"] as Double
+        //nearestStorm = currentWeather["nearestStorm"] as Double
         
         let currentTimeIntVale = currentWeather["time"] as Int
         currentTime = dateStringFromUnixTime(currentTimeIntVale)
@@ -40,6 +42,8 @@ struct Current {
         let iconString = currentWeather["icon"] as String
         icon = weatherIconFromString(iconString)
     }
+    
+    
     
     func dateStringFromUnixTime(unixTime: Int) -> String {
         let timeInSeconds = NSTimeInterval(unixTime)

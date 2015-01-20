@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031331131A6EFFE200147E25 /* OneShotLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031331121A6EFFE200147E25 /* OneShotLocationManager.swift */; };
+		037E9F3F1A6D730C00C370C3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E9F3E1A6D730C00C370C3 /* CoreLocation.framework */; };
 		03CD93961A6C6BF70095374F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CD93951A6C6BF70095374F /* AppDelegate.swift */; };
 		03CD93981A6C6BF70095374F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CD93971A6C6BF70095374F /* ViewController.swift */; };
 		03CD939D1A6C6BF70095374F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03CD939C1A6C6BF70095374F /* Images.xcassets */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		031331121A6EFFE200147E25 /* OneShotLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneShotLocationManager.swift; sourceTree = "<group>"; };
+		037E9F3E1A6D730C00C370C3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		03CD93901A6C6BF70095374F /* Weatherly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weatherly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03CD93941A6C6BF70095374F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03CD93951A6C6BF70095374F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				037E9F3F1A6D730C00C370C3 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +66,7 @@
 		03CD93871A6C6BF70095374F = {
 			isa = PBXGroup;
 			children = (
+				037E9F3E1A6D730C00C370C3 /* CoreLocation.framework */,
 				03CD93921A6C6BF70095374F /* Weatherly */,
 				03CD93A81A6C6BF70095374F /* WeatherlyTests */,
 				03CD93911A6C6BF70095374F /* Products */,
@@ -79,6 +85,7 @@
 		03CD93921A6C6BF70095374F /* Weatherly */ = {
 			isa = PBXGroup;
 			children = (
+				031331121A6EFFE200147E25 /* OneShotLocationManager.swift */,
 				03CD93BA1A6C6D3A0095374F /* Main.storyboard */,
 				03CD93B51A6C6C380095374F /* Current.swift */,
 				03CD93951A6C6BF70095374F /* AppDelegate.swift */,
@@ -218,6 +225,7 @@
 				03CD93B61A6C6C380095374F /* Current.swift in Sources */,
 				03CD93981A6C6BF70095374F /* ViewController.swift in Sources */,
 				03CD93961A6C6BF70095374F /* AppDelegate.swift in Sources */,
+				031331131A6EFFE200147E25 /* OneShotLocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +343,7 @@
 				INFOPLIST_FILE = Weatherly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -345,6 +354,7 @@
 				INFOPLIST_FILE = Weatherly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -401,6 +411,7 @@
 				03CD93B11A6C6BF70095374F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03CD93B21A6C6BF70095374F /* Build configuration list for PBXNativeTarget "WeatherlyTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +420,7 @@
 				03CD93B41A6C6BF70095374F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
