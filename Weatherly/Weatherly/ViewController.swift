@@ -64,17 +64,17 @@ class ViewController: UIViewController {
     
     func getCurrentWeatherData() -> Void {
         
-        //var locManager = CLLocationManager()
-        //locManager.requestWhenInUseAuthorization()
+        var locManager = CLLocationManager()
+        locManager.requestWhenInUseAuthorization()
         
-        //var currentLocation = CLLocation!
+        var currentLocation = CLLocation!
         
-        //if( CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse ||
-            //CLLocationManager.authorizationStatus() == CLAuthorizationStatus.Authorized){
+        if( CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.Authorized){
                 
-                //currentLocation = locManager.location
+                currentLocation = locManager.location
                 
-        //}
+        }
         
       
         
