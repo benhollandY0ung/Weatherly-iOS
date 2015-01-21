@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		031331131A6EFFE200147E25 /* OneShotLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031331121A6EFFE200147E25 /* OneShotLocationManager.swift */; };
 		037E9F3F1A6D730C00C370C3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E9F3E1A6D730C00C370C3 /* CoreLocation.framework */; };
 		03CD93961A6C6BF70095374F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CD93951A6C6BF70095374F /* AppDelegate.swift */; };
 		03CD93981A6C6BF70095374F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CD93971A6C6BF70095374F /* ViewController.swift */; };
@@ -29,7 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		031331121A6EFFE200147E25 /* OneShotLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneShotLocationManager.swift; sourceTree = "<group>"; };
 		037E9F3E1A6D730C00C370C3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		03CD93901A6C6BF70095374F /* Weatherly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weatherly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03CD93941A6C6BF70095374F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 		03CD93921A6C6BF70095374F /* Weatherly */ = {
 			isa = PBXGroup;
 			children = (
-				031331121A6EFFE200147E25 /* OneShotLocationManager.swift */,
 				03CD93BA1A6C6D3A0095374F /* Main.storyboard */,
 				03CD93B51A6C6C380095374F /* Current.swift */,
 				03CD93951A6C6BF70095374F /* AppDelegate.swift */,
@@ -225,7 +222,6 @@
 				03CD93B61A6C6C380095374F /* Current.swift in Sources */,
 				03CD93981A6C6BF70095374F /* ViewController.swift in Sources */,
 				03CD93961A6C6BF70095374F /* AppDelegate.swift in Sources */,
-				031331131A6EFFE200147E25 /* OneShotLocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

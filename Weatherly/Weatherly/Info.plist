@@ -6,6 +6,10 @@
 	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Weatherly needs to get your location.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Weatherly needs to get your location.</string>
 	<key>CFBundleIdentifier</key>
 	<string>com-kwizz$(PRODUCT_NAME:rfc1034identifier)</string>
 	<key>CFBundleInfoDictionaryVersion</key>

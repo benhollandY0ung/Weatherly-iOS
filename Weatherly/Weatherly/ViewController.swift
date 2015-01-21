@@ -16,9 +16,11 @@ import CoreLocation
 
 
 class ViewController: UIViewController {
+    let locationManager = CLLocationManager()
+    
    
   
-    
+    // Current
     @IBOutlet weak var tempValue: UILabel!
     @IBOutlet weak var summaryValue: UILabel!
     @IBOutlet weak var ozoneValue: UILabel!
@@ -30,7 +32,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var refreshActivityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var nearestStormValue: UILabel!
+    
+    // Today
     
     
     
@@ -45,6 +48,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
         // Do any additional setup after loading the view, typically from a nib.
         refreshActivityIndicator.hidden = true
         
@@ -60,23 +74,21 @@ class ViewController: UIViewController {
       
     }
     
-   
     
+    //Current Data
     func getCurrentWeatherData() -> Void {
         
-        var locManager = CLLocationManager()
-        locManager.requestWhenInUseAuthorization()
         
-        var currentLocation = CLLocation!
         
-        if( CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse ||
-            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.Authorized){
-                
-                currentLocation = locManager.location
-                
+        
+        func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+            var locValue:CLLocationCoordinate2D = manager.location.coordinate
+            println("locations = \(locValue.latitude) \(locValue.longitude)")
         }
         
-      
+       
+            
+
         
      
         let baseURL = NSURL(string: "https://api.forecast.io/forecast/\(apiKey)/")
@@ -90,7 +102,12 @@ class ViewController: UIViewController {
                 let dataObject = NSData(contentsOfURL: location)
                 let weatherDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as NSDictionary
                 
+                
+                
                 let currentWeather = Current(weatherDictionary: weatherDictionary)
+                
+                
+                
                 
                 
                 
