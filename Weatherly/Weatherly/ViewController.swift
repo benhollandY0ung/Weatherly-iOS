@@ -15,7 +15,7 @@ import CoreLocation
 
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
    
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
        
         
        
-        
+         
         
         getCurrentWeatherData()
         
@@ -86,8 +86,10 @@ class ViewController: UIViewController {
             println("locations = \(locValue.latitude) \(locValue.longitude)")
         }
         
+        
+        
        
-            
+        
 
         
      
