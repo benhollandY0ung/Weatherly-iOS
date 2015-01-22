@@ -32,6 +32,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var refreshActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var cloudCoverValue: UILabel!
     
     // Today
     
@@ -126,6 +127,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     self.precipitationValue.text = "\(currentWeather.precipProbability)"
                     self.icon.image = currentWeather.icon!
                     //self.nearestStormValue.text = "\(currentWeather.nearestStorm)km"
+                    self.cloudCoverValue.text = "\(currentWeather.cloudCover)"
                         
                     
                     

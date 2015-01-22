@@ -21,6 +21,7 @@ struct Current {
     var pressure: Double
     var visibility: Double
     var windSpeed: Double
+    var cloudCover: Double
     //var nearestStorm: Double
     
     init(weatherDictionary: NSDictionary) {
@@ -35,6 +36,7 @@ struct Current {
         visibility = currentWeather["visibility"] as Double
         windSpeed = currentWeather["windSpeed"] as Double
         //nearestStorm = currentWeather["nearestStorm"] as Double
+        cloudCover = currentWeather["cloudCover"] as Double
         
         let currentTimeIntVale = currentWeather["time"] as Int
         currentTime = dateStringFromUnixTime(currentTimeIntVale)
